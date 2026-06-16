@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos recibidos</title>
+</head>
+<body>
+    <h2>Información recibida</h2>
+
+    <div id="resultado"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const nombre = params.get("nombre");
+        const email = params.get("email");
+        const edad = params.get("edad");
+        const pais = params.get("pais");
+
+        document.getElementById("resultado").innerHTML = `
+            <p><strong>Nombre:</strong> ${nombre}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Edad:</strong> ${edad}</p>
+            <p><strong>País:</strong> ${pais}</p>
+        `;
+    </script>
+</body>
+</html>
