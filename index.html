@@ -7,46 +7,51 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-    <h1> Formulario de Registro </h1>
+        <h1>Formulario de Registro</h1>
 
-    <form id="Miform">
-        <label for="nombreUsuario">Usuario:</label>
-        <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+        <form id="Miform">
 
-        <br><br>
+            <label for="nombreUsuario">Usuario:</label>
+            <input type="text" id="nombreUsuario" name="nombreUsuario">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <br><br>
 
-        <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
 
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" name="edad" min="18" max="60" required>
+            <br><br>
 
-        <br><br>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="60">
 
-        <label for="pais">País:</label>
-        <select id="pais" name="pais" required>
-            <option value="">Seleccione</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Chile">Chile</option>
-            <option value="Uruguay">Uruguay</option>
-            <option value="Brasil">Brasil</option>
-        </select>
+            <br><br>
 
-        <br><br>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Brasil">Brasil</option>
+            </select>
 
-        <label>
-            <input type="checkbox" id="terminos" required>
-            Acepto términos y condiciones
-        </label>
+            <br><br>
 
-        <br><br>
+            <label>
+                <input type="checkbox" id="terminos">
+                Acepto términos y condiciones
+            </label>
 
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+            <br><br>
+
+            <p id="mensajeError"></p>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
 
     <script src="script.js"></script>
 

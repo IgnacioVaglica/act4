@@ -1,5 +1,9 @@
 document.getElementById('Miform').addEventListener('submit', function(event) {
+
     event.preventDefault();
+
+    const mensajeError = document.getElementById('mensajeError');
+    mensajeError.textContent = '';
 
     const nombreUsuario = document.getElementById('nombreUsuario').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -7,33 +11,30 @@ document.getElementById('Miform').addEventListener('submit', function(event) {
     const pais = document.getElementById('pais').value;
     const terminos = document.getElementById('terminos').checked;
 
-
     if (nombreUsuario.length < 5) {
-        alert('El usuario debe tener al menos 5 caracteres');
+        mensajeError.textContent = 'El usuario debe tener al menos 5 caracteres.';
         return;
     }
 
-   
     const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailValido.test(email)) {
-        alert('Email inválido');
+        mensajeError.textContent = 'Debe ingresar un email válido.';
         return;
     }
 
     if (edad < 18 || edad > 60) {
-        alert('La edad debe estar entre 18 y 60 años');
+        mensajeError.textContent = 'La edad debe estar entre 18 y 60 años.';
         return;
     }
 
-
     if (pais === '') {
-        alert('Debe seleccionar un país');
+        mensajeError.textContent = 'Debe seleccionar un país.';
         return;
     }
 
     if (!terminos) {
-        alert('Debe aceptar los términos y condiciones');
+        mensajeError.textContent = 'Debe aceptar los términos y condiciones.';
         return;
     }
 
